@@ -18,6 +18,17 @@ class StringManipulatorTest extends TestCase
         $esperado = "testando strings concatenadas na função";
         $this->assertEquals($esperado, $this->manipulator->concatenateString($texto1, $texto2));
 
+        $texto3 = 'aba';
+        $texto4 = 'cate';
+        $esperado = 'abacate';
+        $this->assertEquals($esperado, $this->manipulator->concatenateString($texto3, $texto4));
+
+        $texto5 = 'testando';
+        $texto6 = 'concatenacao de strings';
+        $esperado = 'testando concatenacao de strings';
+        $this->assertEquals($esperado, $this->manipulator->concatenateString($texto5, $texto6));
+
+
     }
     public function testCountVowels()
     {
@@ -26,7 +37,6 @@ class StringManipulatorTest extends TestCase
 
         $texto = "tEstAndO cOntador de vogais mAiUsculAs";
         $this->assertEquals(15, $this->manipulator->countVowels($texto));
-
 
         $texto = "tstnd cntdr d vgs";
         $this->assertEquals(0, $this->manipulator->countVowels($texto));
